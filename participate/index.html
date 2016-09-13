@@ -50,7 +50,7 @@ description: pages.participate.description
     
     <!-- 
         BUDGET PROPOSALS 
-        .participate-budgets-graphic
+        .participate-budgets-graphicj
     -->
     <section id="participate-budgets">
         <div class="content">
@@ -87,5 +87,21 @@ description: pages.participate.description
             </div>
         </div>
     </section>
+
+    <script type="text/javascript" src="/assets/js/dash-masternode-globe.min.js"></script>
+    <script type="text/javascript">
+        if (!DashGlobe.Detector.webgl) {
+            // nothing
+        } else {
+            window.globe = new DashGlobe({
+                container: document.querySelectorAll('[data-js-masternode-globe]')[0],
+                imgDir: '/assets/img/',
+                url: '/assets/mn_locations.tsv',
+                cameraOffset: { x: 0, y: 170, z: 0 },
+                initialZoom: 450,
+                barColor: 0xddddddff
+            });
+        }
+    </script>
 
 </div>
